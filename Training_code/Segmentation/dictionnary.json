@@ -1,0 +1,44 @@
+{
+    "batch_size": 10, 
+    "datagen": {
+        "name": "spinal2D", 
+        "params": {
+            "augmentation": {
+                "augmentation_choices": [
+                    true
+                ], 
+                "random_transform": {
+                    "dark": false, 
+                    "gaussian": true, 
+                    "height_shift_range": true, 
+                    "horizontal_switch": true, 
+                    "light": false, 
+                    "rotate": true, 
+                    "vertical_switch": false, 
+                    "width_shift_range": true
+                }, 
+                "save_folder": "../../../Results/Segmentation_prediction//305_network=GpunetBn_loss=dice_loss_datagen=spinal2D_inputShape=reducedImages-512-128_labelsShape=distanceMapWhite-3-512-128/Augmented_images/"
+            }
+        }
+    }, 
+    "exp_name": "305_network=GpunetBn_loss=dice_loss_datagen=spinal2D_inputShape=reducedImages-512-128_labelsShape=distanceMapWhite-3-512-128", 
+    "finetune": false, 
+    "finetune_exp": "", 
+    "input_path": "../../../DATA/data/training_distance_map/reduced_images_1024_256/", 
+    "input_shape": "reducedImages-512-128", 
+    "labels_path_1": "../../../DATA/labels/training_distance_map/distance_map_white_12_1024_256/", 
+    "labels_path_2": "../../../DATA/labels/training_distance_map/distance_map_white_2_1024_256/", 
+    "labels_shape": "distanceMapWhite-3-512-128", 
+    "loss": "dice_loss", 
+    "loss_factor": 5, 
+    "nb_epoch": 400, 
+    "network": "GpunetBn", 
+    "percent_of_training_file": 0.8, 
+    "py_list": [
+        "metrics.py", 
+        "models.py", 
+        "image_augmentation.py"
+    ], 
+    "result_path": "../../../Results/Segmentation_prediction/", 
+    "sh_list": []
+}
